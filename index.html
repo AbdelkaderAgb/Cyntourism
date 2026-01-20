@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYN Tourism Algeria - Premium Turkish Transfers & Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root{--primary-gold:#C9A962;--primary-gold-dark:#A68B4B;--deep-navy:#0A1628;--midnight:#0D1B2A;--ocean-blue:#1B3A4B;--soft-cream:#F8F5F0;--warm-white:#FDFCFA;--text-dark:#1A1A1A;--text-muted:#6B7280;--accent-red:#C41E3A}
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Montserrat',sans-serif;background:var(--warm-white);color:var(--text-dark);line-height:1.7;overflow-x:hidden}
+        h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600}
+        .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;transition:all .4s ease;background:transparent}
+        .navbar.scrolled{background:rgba(10,22,40,.98);backdrop-filter:blur(10px);box-shadow:0 4px 30px rgba(0,0,0,.15)}
+        .logo{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:white}
+        .logo-icon{width:50px;height:50px;background:linear-gradient(135deg,var(--primary-gold),var(--primary-gold-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--deep-navy)}
+        .logo-text{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;letter-spacing:1px}
+        .logo-tagline{font-size:.65rem;text-transform:uppercase;letter-spacing:2px;opacity:.8;margin-top:-2px}
+        .nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+        .nav-links a{color:white;text-decoration:none;font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;position:relative;padding:.5rem 0;transition:color .3s ease}
+        .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--primary-gold);transition:width .3s ease}
+        .nav-links a:hover::after{width:100%}
+        .nav-links a:hover{color:var(--primary-gold)}
+        .nav-cta{background:var(--primary-gold);color:var(--deep-navy)!important;padding:.75rem 1.5rem!important;border-radius:4px;font-weight:600!important}
+        .nav-cta::after{display:none!important}
+        .nav-cta:hover{background:var(--primary-gold-dark);color:white!important}
+        .mobile-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:10px}
+        .mobile-toggle span{width:25px;height:2px;background:white;transition:all .3s ease}
+        .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--deep-navy) 0%,var(--midnight) 50%,var(--ocean-blue) 100%);overflow:hidden}
+        .hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(201,169,98,.15) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);animation:pulse 8s ease-in-out infinite}
+        @keyframes pulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.5}50%{transform:translate(-50%,-50%) scale(1.2);opacity:.8}}
+        .hero-content{position:relative;z-index:2;text-align:center;color:white;max-width:900px;padding:0 2rem;animation:fadeInUp 1s ease-out}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+        .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(201,169,98,.2);border:1px solid rgba(201,169,98,.4);padding:.5rem 1.25rem;border-radius:50px;font-size:.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:2rem}
+        .hero-badge i{color:var(--primary-gold)}
+        .hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.1;margin-bottom:1.5rem}
+        .hero h1 span{color:var(--primary-gold);font-style:italic}
+        .hero-subtitle{font-size:1.15rem;opacity:.85;max-width:650px;margin:0 auto 2.5rem;font-weight:300;line-height:1.8}
+        .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;gap:.5rem;padding:1rem 2rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;transition:all .3s ease;border:none;cursor:pointer}
+        .btn-primary{background:var(--primary-gold);color:var(--deep-navy)}
+        .btn-primary:hover{background:var(--primary-gold-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,169,98,.4)}
+        .btn-outline{background:transparent;color:white;border:2px solid rgba(255,255,255,.4)}
+        .btn-outline:hover{border-color:var(--primary-gold);color:var(--primary-gold)}
+        .hero-stats{display:flex;justify-content:center;gap:4rem;margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.1)}
+        .stat{text-align:center}
+        .stat-number{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--primary-gold);line-height:1}
+        .stat-label{font-size:.8rem;text-transform:uppercase;letter-spacing:2px;opacity:.7;margin-top:.5rem}
+        section{padding:6rem 5%}
+        .section-header{text-align:center;max-width:700px;margin:0 auto 4rem}
+        .section-tag{display:inline-block;color:var(--primary-gold);font-size:.8rem;text-transform:uppercase;letter-spacing:3px;margin-bottom:1rem;font-weight:600}
+        .section-title{font-size:clamp(2rem,4vw,3rem);color:var(--deep-navy);margin-bottom:1rem}
+        .section-desc{color:var(--text-muted);font-size:1.05rem}
+        .experiences{background:var(--soft-cream)}
+        .experiences-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;max-width:1300px;margin:0 auto}
+        .experience-card{background:white;padding:3rem 2rem;border-radius:12px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.06);transition:all .4s ease;position:relative;overflow:hidden}
+        .experience-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--primary-gold),var(--accent-red));transform:scaleX(0);transition:transform .4s ease}
+        .experience-card:hover{transform:translateY(-10px);box-shadow:0 25px 60px rgba(0,0,0,.12)}
+        .experience-card:hover::before{transform:scaleX(1)}
+        .experience-icon{width:80px;height:80px;background:linear-gradient(135deg,var(--deep-navy),var(--ocean-blue));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:2rem;color:var(--primary-gold)}
+        .experience-card h3{font-size:1.5rem;color:var(--deep-navy);margin-bottom:1rem}
+        .experience-card p{color:var(--text-muted);font-size:.95rem;line-height:1.8}
+        .about{background:var(--warm-white)}
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1300px;margin:0 auto}
+        .about-image{position:relative}
+        .about-image img{width:100%;height:500px;object-fit:cover;border-radius:8px;box-shadow:0 30px 60px rgba(0,0,0,.15)}
+        .about-image::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:3px solid var(--primary-gold);border-radius:8px;z-index:-1}
+        .years-badge{position:absolute;bottom:-30px;right:-30px;background:var(--deep-navy);color:white;padding:1.5rem 2rem;border-radius:8px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.2)}
+        .years-badge .years{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--primary-gold);line-height:1}
+        .years-badge span{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:2px;margin-top:.25rem}
+        .about-content h2{font-size:2.5rem;color:var(--deep-navy);margin-bottom:1.5rem}
+        .about-content h2 span{color:var(--primary-gold);font-style:italic}
+        .about-content p{color:var(--text-muted);margin-bottom:1.5rem;font-size:1.05rem}
+        .about-features{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+        .about-feature{display:flex;align-items:flex-start;gap:1rem}
+        .about-feature i{width:40px;height:40px;background:rgba(201,169,98,.15);color:var(--primary-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .about-feature h4{font-size:1rem;font-family:'Montserrat',sans-serif;font-weight:600;margin-bottom:.25rem}
+        .about-feature p{font-size:.9rem;margin:0}
+        .vip-transfers{background:linear-gradient(135deg,var(--deep-navy) 0%,var(--midnight) 100%);color:white;position:relative;overflow:hidden}
+        .vip-transfers .section-title{color:white}
+        .vip-transfers .section-desc{color:rgba(255,255,255,.7)}
+        .vip-intro{text-align:center;max-width:900px;margin:0 auto 4rem;position:relative;z-index:1}
+        .vip-intro p{color:rgba(255,255,255,.8);font-size:1.1rem;line-height:1.9}
+        .airports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1300px;margin:0 auto;position:relative;z-index:1}
+        .airport-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:2.5rem;transition:all .4s ease}
+        .airport-card:hover{background:rgba(255,255,255,.08);border-color:var(--primary-gold);transform:translateY(-5px)}
+        .airport-icon{width:60px;height:60px;background:rgba(201,169,98,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--primary-gold);margin-bottom:1.5rem}
+        .airport-card h3{font-size:1.4rem;color:white;margin-bottom:1rem}
+        .airport-card p{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.8}
+        .fleet{background:var(--soft-cream)}
+        .fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1300px;margin:0 auto}
+        .fleet-card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06);transition:all .4s ease}
+        .fleet-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.12)}
+        .fleet-image{height:160px;background:linear-gradient(135deg,var(--deep-navy),var(--ocean-blue));display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--primary-gold);opacity:.6}
+        .fleet-content{padding:1.5rem;text-align:center}
+        .fleet-content h4{font-size:1.25rem;color:var(--deep-navy);margin-bottom:.5rem}
+        .fleet-content p{color:var(--text-muted);font-size:.9rem}
+        .why-choose{background:var(--warm-white)}
+        .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1100px;margin:0 auto}
+        .why-card{display:flex;align-items:flex-start;gap:1.25rem;padding:1.5rem;background:white;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.04);transition:all .3s ease}
+        .why-card:hover{box-shadow:0 10px 30px rgba(0,0,0,.08);transform:translateY(-3px)}
+        .why-icon{width:50px;height:50px;background:linear-gradient(135deg,var(--primary-gold),var(--primary-gold-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:var(--deep-navy);flex-shrink:0}
+        .why-card h4{font-size:1.1rem;color:var(--deep-navy);margin-bottom:.25rem;font-family:'Montserrat',sans-serif;font-weight:600}
+        .why-card p{color:var(--text-muted);font-size:.85rem;margin:0}
+        .tours{background:linear-gradient(180deg,var(--deep-navy) 0%,var(--midnight) 100%);color:white}
+        .tours .section-title{color:white}
+        .tours .section-desc{color:rgba(255,255,255,.7)}
+        .tours-categories{max-width:1300px;margin:0 auto}
+        .tour-category{margin-bottom:4rem}
+        .tour-category:last-child{margin-bottom:0}
+        .category-title{font-size:1.5rem;color:var(--primary-gold);margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:.75rem}
+        .category-title i{font-size:1.25rem}
+        .tours-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+        .tour-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;overflow:hidden;transition:all .4s ease}
+        .tour-card:hover{background:rgba(255,255,255,.08);border-color:var(--primary-gold);transform:translateY(-5px)}
+        .tour-image{height:140px;background:linear-gradient(135deg,var(--ocean-blue),var(--deep-navy));position:relative;display:flex;align-items:center;justify-content:center}
+        .tour-image i{font-size:3rem;color:var(--primary-gold);opacity:.4}
+        .tour-badge{position:absolute;top:.75rem;right:.75rem;background:var(--primary-gold);color:var(--deep-navy);padding:.3rem .75rem;border-radius:50px;font-size:.7rem;font-weight:600;text-transform:uppercase}
+        .tour-content{padding:1.25rem}
+        .tour-content h3{font-size:1.15rem;margin-bottom:.5rem;color:white}
+        .tour-content p{color:rgba(255,255,255,.6);font-size:.85rem;margin-bottom:1rem;line-height:1.6}
+        .tour-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--primary-gold);text-decoration:none;font-weight:600;font-size:.8rem;transition:gap .3s ease}
+        .tour-link:hover{gap:.6rem}
+        .certification{background:var(--soft-cream);padding:3rem 5%}
+        .certification-content{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:3rem;background:white;padding:2.5rem 3rem;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.06)}
+        .cert-badge{width:100px;height:100px;background:linear-gradient(135deg,var(--accent-red),#8B0000);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .cert-badge i{font-size:2.5rem;color:white}
+        .cert-text h3{font-size:1.5rem;color:var(--deep-navy);margin-bottom:.5rem}
+        .cert-text p{color:var(--text-muted);font-size:1rem}
+        .cert-text strong{color:var(--accent-red)}
+        .contact{background:var(--warm-white)}
+        .contact-wrapper{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;max-width:1200px;margin:0 auto}
+        .contact-cards{display:flex;flex-direction:column;gap:1.5rem}
+        .contact-card{background:linear-gradient(135deg,var(--deep-navy),var(--midnight));padding:2rem;border-radius:12px;color:white}
+        .contact-card h3{font-size:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+        .contact-details{display:flex;flex-direction:column;gap:1rem}
+        .contact-item{display:flex;align-items:flex-start;gap:1rem}
+        .contact-item i{width:40px;height:40px;background:rgba(201,169,98,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary-gold);flex-shrink:0}
+        .contact-item h5{font-family:'Montserrat',sans-serif;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:.2rem;font-weight:500}
+        .contact-item a{color:white;text-decoration:none;transition:color .3s ease}
+        .contact-item a:hover{color:var(--primary-gold)}
+        .social-links{display:flex;gap:.75rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1)}
+        .social-links a{width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:all .3s ease}
+        .social-links a:hover{background:var(--primary-gold);color:var(--deep-navy)}
+        .contact-form{background:white;padding:2.5rem;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.08)}
+        .contact-form h3{font-size:1.75rem;color:var(--deep-navy);margin-bottom:2rem}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+        .form-group{margin-bottom:1.5rem}
+        .form-group label{display:block;font-size:.85rem;font-weight:500;margin-bottom:.5rem;color:var(--text-dark)}
+        .form-group input,.form-group select,.form-group textarea{width:100%;padding:1rem;border:2px solid #E5E7EB;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:.95rem;transition:border-color .3s ease}
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--primary-gold)}
+        .form-group textarea{resize:vertical;min-height:100px}
+        .btn-submit{width:100%;padding:1.25rem;background:var(--deep-navy);color:white;border:none;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:all .3s ease;display:flex;align-items:center;justify-content:center;gap:.5rem}
+        .btn-submit:hover{background:var(--primary-gold);color:var(--deep-navy)}
+        .footer{background:var(--deep-navy);color:white;padding:4rem 5% 2rem}
+        .footer-main{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;max-width:1300px;margin:0 auto;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.1)}
+        .footer-brand .logo{margin-bottom:1.5rem}
+        .footer-brand p{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem}
+        .footer h4{font-family:'Montserrat',sans-serif;font-size:.9rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1.5rem;color:var(--primary-gold);font-weight:600}
+        .footer-links{list-style:none}
+        .footer-links li{margin-bottom:.75rem}
+        .footer-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.95rem;transition:color .3s ease}
+        .footer-links a:hover{color:var(--primary-gold)}
+        .footer-contact li{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:1rem;color:rgba(255,255,255,.7);font-size:.9rem}
+        .footer-contact i{color:var(--primary-gold);margin-top:3px}
+        .footer-bottom{display:flex;justify-content:space-between;align-items:center;max-width:1300px;margin:0 auto;padding-top:2rem;font-size:.85rem;color:rgba(255,255,255,.5)}
+        .tursab-badge{display:flex;align-items:center;gap:.75rem;background:rgba(196,30,58,.2);padding:.5rem 1rem;border-radius:6px;border:1px solid rgba(196,30,58,.3)}
+        .tursab-badge i{color:var(--accent-red)}
+        .tursab-badge span{font-size:.8rem;color:rgba(255,255,255,.8)}
+        .whatsapp-float{position:fixed;bottom:2rem;right:2rem;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:1.75rem;text-decoration:none;box-shadow:0 10px 30px rgba(37,211,102,.4);z-index:999;transition:all .3s ease;animation:float 3s ease-in-out infinite}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 15px 40px rgba(37,211,102,.5)}
+        @media (max-width:1200px){.tours-grid{grid-template-columns:repeat(3,1fr)}.fleet-grid{grid-template-columns:repeat(2,1fr)}}
+        @media (max-width:1024px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--deep-navy);flex-direction:column;padding:2rem;gap:1.5rem}.nav-links.active{display:flex}.mobile-toggle{display:flex}.about-grid{grid-template-columns:1fr;gap:3rem}.experiences-grid{grid-template-columns:1fr}.airports-grid{grid-template-columns:1fr}.tours-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr}.contact-wrapper{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr 1fr;gap:2rem}.hero-stats{gap:2rem}.certification-content{flex-direction:column;text-align:center}}
+        @media (max-width:768px){section{padding:4rem 5%}.hero-stats{flex-direction:column;gap:1.5rem}.form-row{grid-template-columns:1fr}.tours-grid{grid-template-columns:1fr}.fleet-grid{grid-template-columns:1fr}.about-features{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:1rem;text-align:center}.years-badge{bottom:-20px;right:10px}}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo"><div class="logo-icon"><i class="fas fa-star-and-crescent"></i></div><div><div class="logo-text">CYN Tour</div><div class="logo-tagline">Tourism & Travel Agency</div></div></a>
+        <ul class="nav-links"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#transfers">Transfers</a></li><li><a href="#tours">Tours</a></li><li><a href="#fleet">Fleet</a></li><li><a href="#contact">Contact</a></li><li><a href="#contact" class="nav-cta">Book Now</a></li></ul>
+        <button class="mobile-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-crown"></i> Premium Turkish Experiences Since 2006</div>
+            <h1>Your Gateway to <span>Turkey</span> from Algeria</h1>
+            <p class="hero-subtitle">Experience luxury and comfort with our premium transfer solutions. VIP transfers, exclusive tours, and unforgettable adventures across Turkey's most beautiful destinations.</p>
+            <div class="hero-buttons"><a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Transfer</a><a href="#tours" class="btn btn-outline"><i class="fas fa-compass"></i> Explore Tours</a></div>
+            <div class="hero-stats"><div class="stat"><div class="stat-number">18+</div><div class="stat-label">Years Experience</div></div><div class="stat"><div class="stat-number">50K+</div><div class="stat-label">Happy Travelers</div></div><div class="stat"><div class="stat-number">100+</div><div class="stat-label">Premium Vehicles</div></div></div>
+        </div>
+    </section>
+
+    <section class="experiences" id="experiences">
+        <div class="section-header"><span class="section-tag">Premium Turkish Experiences</span><h2 class="section-title">Discover Excellence in Every Journey</h2><p class="section-desc">From luxury transfers to exclusive tours and premium accommodations, we craft unforgettable Turkish experiences.</p></div>
+        <div class="experiences-grid">
+            <div class="experience-card"><div class="experience-icon"><i class="fas fa-car-side"></i></div><h3>Luxury Transfer Services</h3><p>Experience premium transportation from all major airports in Turkey. Our fleet of luxury vehicles ensures comfortable and reliable travel to your destination.</p></div>
+            <div class="experience-card"><div class="experience-icon"><i class="fas fa-map-marked-alt"></i></div><h3>Exclusive Tours</h3><p>Discover Turkey's hidden gems with our carefully curated tours. From Istanbul's historic wonders to Cappadocia's magical landscapes, create unforgettable memories.</p></div>
+            <div class="experience-card"><div class="experience-icon"><i class="fas fa-hotel"></i></div><h3>Luxury Accommodations</h3><p>Indulge in Turkey's finest hotels and resorts. From beachfront villas to historic boutique hotels, we offer a curated selection of premium accommodations.</p></div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-image"><img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&h=500&fit=crop" alt="Istanbul Cityscape"><div class="years-badge"><div class="years">18+</div><span>Years of Excellence</span></div></div>
+            <div class="about-content"><span class="section-tag">About Us</span><h2>Your Trusted Partner for <span>Turkish Adventures</span></h2><p>CYN TURIZM offers a wide range of transfer services to and from airports, including Istanbul International Airport, Sabiha Gökçen Airport, and Antalya Airport, to facilitate the movements of travelers and provide a comfortable journey.</p><p>On a daily basis, we serve hundreds of customers from all over the world who want to get transferred from airports, cruise ports, or their hotels. Moreover, we provide Meet and Greet services at all meeting points.</p><p>Since 2006, our primary goal has been the highest quality of our services. This is why CYN Tour became one of the traveler's top choices when traveling to Turkey.</p><div class="about-features"><div class="about-feature"><i class="fas fa-shield-alt"></i><div><h4>Safe & Secure</h4><p>Licensed and insured vehicles</p></div></div><div class="about-feature"><i class="fas fa-user-tie"></i><div><h4>Professional Drivers</h4><p>Multilingual local experts</p></div></div><div class="about-feature"><i class="fas fa-car"></i><div><h4>Luxury Fleet</h4><p>Mercedes & premium vehicles</p></div></div><div class="about-feature"><i class="fas fa-headset"></i><div><h4>24/7 Support</h4><p>Always here to assist you</p></div></div></div></div>
+        </div>
+    </section>
+
+    <section class="vip-transfers" id="transfers">
+        <div class="section-header"><span class="section-tag">VIP Transfer Services</span><h2 class="section-title">Premium Airport Transfers</h2><p class="section-desc">Experience luxury and comfort with our premium transfer solutions across Turkey's major airports.</p></div>
+        <div class="vip-intro"><p>CYN TURIZM offers a wide range of transfer services to and from the airports, including Istanbul International Airport, Sabiha Gökçen Airport, and Antalya Airport. Our fleet includes Mercedes Van, Mercedes Vito, and modern buses offering comfortable and direct trips to various destinations.</p></div>
+        <div class="airports-grid">
+            <div class="airport-card"><div class="airport-icon"><i class="fas fa-plane"></i></div><h3>Istanbul International Airport</h3><p>One of the largest airports in the world, located on the European side of the city and serves millions of passengers annually. Transfer services available via Mercedes Van, Mercedes Vito, and buses offering comfortable trips to various parts of the city.</p></div>
+            <div class="airport-card"><div class="airport-icon"><i class="fas fa-plane-arrival"></i></div><h3>Sabiha Gökçen Airport</h3><p>Located on the Asian side of Istanbul and is a preferred choice for many domestic and international flights. Travelers can choose from Mercedes Vito, Mercedes Van, and buses providing convenient and efficient transportation.</p></div>
+            <div class="airport-card"><div class="airport-icon"><i class="fas fa-umbrella-beach"></i></div><h3>Antalya Airport</h3><p>The gateway to Turkey's Riviera, serves travelers heading to beautiful beaches and resorts. Multiple transport services including buses, Mercedes Van, and Mercedes Vito ensure travelers reach their destinations with ease.</p></div>
+        </div>
+    </section>
+
+    <section class="fleet" id="fleet">
+        <div class="section-header"><span class="section-tag">Our Fleet</span><h2 class="section-title">Luxury Vehicles for Every Need</h2><p class="section-desc">We pride ourselves on maintaining a modern fleet of luxury vehicles that cater to all your transfer needs.</p></div>
+        <div class="fleet-grid">
+            <div class="fleet-card"><div class="fleet-image"><i class="fas fa-shuttle-van"></i></div><div class="fleet-content"><h4>Mercedes Vito</h4><p>Perfect for small groups and families</p></div></div>
+            <div class="fleet-card"><div class="fleet-image"><i class="fas fa-van-shuttle"></i></div><div class="fleet-content"><h4>Mercedes Van</h4><p>Spacious and comfortable for larger groups</p></div></div>
+            <div class="fleet-card"><div class="fleet-image"><i class="fas fa-car"></i></div><div class="fleet-content"><h4>Luxury Sedans</h4><p>For executive and VIP transfers</p></div></div>
+            <div class="fleet-card"><div class="fleet-image"><i class="fas fa-bus"></i></div><div class="fleet-content"><h4>Modern Buses</h4><p>Ideal for group transfers and excursions</p></div></div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="section-header"><span class="section-tag">Why Choose Us</span><h2 class="section-title">The CYN Tour Difference</h2><p class="section-desc">Experience the quality and reliability that has made us a trusted name since 2006.</p></div>
+        <div class="why-grid">
+            <div class="why-card"><div class="why-icon"><i class="fas fa-language"></i></div><div><h4>Multilingual Drivers</h4><p>Professional drivers speaking multiple languages</p></div></div>
+            <div class="why-card"><div class="why-icon"><i class="fas fa-clock"></i></div><div><h4>24/7 Availability</h4><p>Round-the-clock service for your convenience</p></div></div>
+            <div class="why-card"><div class="why-icon"><i class="fas fa-stopwatch"></i></div><div><h4>Punctual Service</h4><p>On-time pickups and drop-offs guaranteed</p></div></div>
+            <div class="why-card"><div class="why-icon"><i class="fas fa-tags"></i></div><div><h4>Transparent Pricing</h4><p>Competitive rates with no hidden fees</p></div></div>
+            <div class="why-card"><div class="why-icon"><i class="fas fa-snowflake"></i></div><div><h4>Air-Conditioned</h4><p>Comfortable, climate-controlled vehicles</p></div></div>
+            <div class="why-card"><div class="why-icon"><i class="fas fa-door-open"></i></div><div><h4>Door-to-Door</h4><p>Complete service from pickup to destination</p></div></div>
+        </div>
+    </section>
+
+    <section class="tours" id="tours">
+        <div class="section-header"><span class="section-tag">Discover Amazing Tours</span><h2 class="section-title">Explore the Beauty of Turkey</h2><p class="section-desc">Our carefully curated tours showcase the best of Turkey's rich history, stunning landscapes, and vibrant culture.</p></div>
+        <div class="tours-categories">
+            <div class="tour-category"><h3 class="category-title"><i class="fas fa-mosque"></i> Istanbul & Marmara Region</h3>
+                <div class="tours-grid">
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-landmark"></i><span class="tour-badge">Popular</span></div><div class="tour-content"><h3>Istanbul Tour</h3><p>Explore the historical beauty of Istanbul with our amazing guided tour.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-tree"></i></div><div class="tour-content"><h3>Bursa Tour</h3><p>Experience the green Bursa with its historic sites and nature.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-hot-tub"></i></div><div class="tour-content"><h3>Yalova Tour</h3><p>Relax in thermal springs and explore the natural beauty of Yalova.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-water"></i></div><div class="tour-content"><h3>Şile Ağva Tour</h3><p>Discover serene beaches and beautiful landscapes of Şile and Ağva.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-mountain"></i></div><div class="tour-content"><h3>Sapanca Maşukiye Tour</h3><p>Enjoy the lush greenery and peaceful lake of Sapanca.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-ship"></i><span class="tour-badge">Recommended</span></div><div class="tour-content"><h3>Princes' Islands</h3><p>Experience the charm of Istanbul's islands with rich history and tranquil scenery.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                </div>
+            </div>
+            <div class="tour-category"><h3 class="category-title"><i class="fas fa-hot-air-balloon"></i> Cappadocia Adventures</h3>
+                <div class="tours-grid">
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-mountain"></i><span class="tour-badge">Best Seller</span></div><div class="tour-content"><h3>Cappadocia Red Tour</h3><p>Explore breathtaking landscapes and fairy chimneys of Cappadocia.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-leaf"></i></div><div class="tour-content"><h3>Green Tour</h3><p>Immerse yourself in lush green valleys and historical sites.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-motorcycle"></i></div><div class="tour-content"><h3>ATV Quadbike</h3><p>Experience the thrill of riding through Cappadocia's unique landscapes.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-horse"></i></div><div class="tour-content"><h3>Horseback Riding</h3><p>Connect with nature and explore scenic trails on horseback.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                    <div class="tour-card"><div class="tour-image"><i class="fas fa-music"></i><span class="tour-badge">Special</span></div><div class="tour-content"><h3>Turkish Night</h3><p>A magical evening of Turkish culture with music, dance, and cuisine.</p><a href="#contact" class="tour-link">Book Now <i class="fas fa-arrow-right"></i></a></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certification"><div class="certification-content"><div class="cert-badge"><i class="fas fa-certificate"></i></div><div class="cert-text"><h3>Official Certification</h3><p>CYN TURIZM is proud to be certified by <strong>TURSAB</strong> (Association of Turkish Travel Agencies) under license no: <strong>11738</strong></p></div></div></section>
+
+    <section class="contact" id="contact">
+        <div class="section-header"><span class="section-tag">Get In Touch</span><h2 class="section-title">Book Your Transfer Today</h2><p class="section-desc">Contact us to book your transfer or tour. Our team is ready to make your journey seamless.</p></div>
+        <div class="contact-wrapper">
+            <div class="contact-cards">
+                <div class="contact-card"><h3><span class="flag">🇩🇿</span> Algeria Office</h3><div class="contact-details"><div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h5>Address</h5><p>08, Route du Kadous<br>Hydra - Alger, Algeria</p></div></div><div class="contact-item"><i class="fab fa-whatsapp"></i><div><h5>WhatsApp</h5><p><a href="https://wa.me/213770127157">+213 770 127 157</a></p></div></div><div class="contact-item"><i class="fas fa-phone"></i><div><h5>Phone</h5><p><a href="tel:+21323482022">+213 23 48 20 22</a></p></div></div><div class="contact-item"><i class="fas fa-envelope"></i><div><h5>Email</h5><p><a href="mailto:info@cyntour.com">info@cyntour.com</a></p></div></div></div></div>
+                <div class="contact-card"><h3><span class="flag">🇹🇷</span> Turkey Office</h3><div class="contact-details"><div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h5>Address</h5><p>Molla Gürani, Karakoyunlu Sok.<br>No:2 D:4, 34093 Fatih/İstanbul</p></div></div><div class="contact-item"><i class="fab fa-whatsapp"></i><div><h5>WhatsApp</h5><p><a href="https://wa.me/905318176770">+90 531 817 67 70</a></p></div></div><div class="contact-item"><i class="fas fa-envelope"></i><div><h5>Email</h5><p><a href="mailto:info@cyntour.com">info@cyntour.com</a><br><a href="mailto:sales@cyntourim.com">sales@cyntourim.com</a></p></div></div></div><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="https://instagram.com/cyn__turizm" target="_blank"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="https://wa.me/905318176770"><i class="fab fa-whatsapp"></i></a></div></div>
+            </div>
+            <div class="contact-form"><h3>Request a Quote</h3><form><div class="form-row"><div class="form-group"><label>Full Name</label><input type="text" placeholder="Your full name" required></div><div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com" required></div></div><div class="form-row"><div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+213 XXX XXX XXX"></div><div class="form-group"><label>Service Type</label><select><option value="">Select a service</option><optgroup label="Transfers"><option value="istanbul-airport">Istanbul Airport Transfer</option><option value="sabiha">Sabiha Gökçen Transfer</option><option value="antalya">Antalya Airport Transfer</option><option value="hotel">Hotel Transfer</option></optgroup><optgroup label="Istanbul Tours"><option value="istanbul-tour">Istanbul City Tour</option><option value="bursa">Bursa Tour</option><option value="princes">Princes' Islands</option></optgroup><optgroup label="Cappadocia Tours"><option value="cappadocia-red">Cappadocia Red Tour</option><option value="cappadocia-green">Cappadocia Green Tour</option><option value="turkish-night">Turkish Night</option></optgroup></select></div></div><div class="form-row"><div class="form-group"><label>Travel Date</label><input type="date"></div><div class="form-group"><label>Number of Passengers</label><select><option value="">Select</option><option value="1-2">1-2 Passengers</option><option value="3-4">3-4 Passengers</option><option value="5-7">5-7 Passengers</option><option value="8+">8+ Passengers</option></select></div></div><div class="form-group"><label>Your Message</label><textarea placeholder="Tell us about your travel plans, pickup location, destination..."></textarea></div><button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Request</button></form></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand"><a href="#" class="logo"><div class="logo-icon"><i class="fas fa-star-and-crescent"></i></div><div><div class="logo-text">CYN Tour</div><div class="logo-tagline">Tourism & Travel Agency</div></div></a><p>Your trusted partner for premium Turkish transfers and tours since 2006. TURSAB certified agency providing quality services to travelers worldwide.</p><div class="tursab-badge"><i class="fas fa-certificate"></i><span>TURSAB License: 11738</span></div></div>
+            <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#transfers">Transfers</a></li><li><a href="#tours">Tours</a></li><li><a href="#fleet">Our Fleet</a></li><li><a href="#contact">Contact</a></li></ul></div>
+            <div><h4>Popular Tours</h4><ul class="footer-links"><li><a href="#tours">Istanbul City Tour</a></li><li><a href="#tours">Cappadocia Red Tour</a></li><li><a href="#tours">Princes' Islands</a></li><li><a href="#tours">Bursa Tour</a></li><li><a href="#tours">Turkish Night</a></li></ul></div>
+            <div><h4>Algeria Office</h4><ul class="footer-links footer-contact"><li><i class="fas fa-map-marker-alt"></i> 08, Route du Kadous, Hydra - Alger</li><li><i class="fas fa-phone"></i> +213 23 48 20 22</li><li><i class="fab fa-whatsapp"></i> +213 770 127 157</li><li><i class="fas fa-envelope"></i> info@cyntour.com</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 CYN TURIZM. All rights reserved. | TURSAB License: 11738</p><p>Premium Turkish Transfers & Tours | @cyn__turizm</p></div>
+    </footer>
+
+    <a href="https://wa.me/213770127157" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        window.addEventListener('scroll',function(){document.querySelector('.navbar').classList.toggle('scrolled',window.scrollY>50)});
+        function toggleNav(){document.querySelector('.nav-links').classList.toggle('active')}
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();const target=document.querySelector(this.getAttribute('href'));if(target){target.scrollIntoView({behavior:'smooth',block:'start'});document.querySelector('.nav-links').classList.remove('active')}})});
+        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)'}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+        document.querySelectorAll('.experience-card,.airport-card,.tour-card,.why-card,.fleet-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity 0.6s ease, transform 0.6s ease';observer.observe(el)});
+    </script>
+</body>
+</html>
