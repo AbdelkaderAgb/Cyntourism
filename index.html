@@ -117,7 +117,8 @@
         .tours-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
         .tour-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;overflow:hidden;transition:all .4s ease}
         .tour-card:hover{background:rgba(255,255,255,.08);border-color:var(--primary-gold);transform:translateY(-5px)}
-        .tour-image{height:140px;background:linear-gradient(135deg,var(--ocean-blue),var(--deep-navy));position:relative;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center}
+        .tour-image{height:140px;position:relative;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center}
+        .tour-image:not([style*="background-image"]){background:linear-gradient(135deg,var(--ocean-blue),var(--deep-navy))}
         .tour-image i{font-size:3rem;color:var(--primary-gold);opacity:.4}
         .tour-badge{position:absolute;top:.75rem;right:.75rem;background:var(--primary-gold);color:var(--deep-navy);padding:.3rem .75rem;border-radius:50px;font-size:.7rem;font-weight:600;text-transform:uppercase}
         .tour-content{padding:1.25rem}
@@ -128,7 +129,10 @@
         .certification{background:var(--soft-cream);padding:3rem 5%}
         .certification-content{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:3rem;background:white;padding:2.5rem 3rem;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.06)}
         .cert-badge{width:100px;height:100px;background:linear-gradient(135deg,var(--accent-red),#8B0000);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .cert-badge.has-logo{background:transparent}
         .cert-badge i{font-size:2.5rem;color:white}
+        .tursab-logo{width:80px;height:auto;border-radius:50%}
+        .tursab-logo-small{width:24px;height:24px;border-radius:50%}
         .cert-text h3{font-size:1.5rem;color:var(--deep-navy);margin-bottom:.5rem}
         .cert-text p{color:var(--text-muted);font-size:1rem}
         .cert-text strong{color:var(--accent-red)}
@@ -270,7 +274,7 @@
         </div>
     </section>
 
-    <section class="certification"><div class="certification-content"><div class="cert-badge"><img src="Toursablogo.png" alt="TURSAB Logo" style="width:80px;height:auto;border-radius:50%;"></div><div class="cert-text"><h3>Official Certification</h3><p>CYN TURIZM is proud to be certified by <strong>TURSAB</strong> (Association of Turkish Travel Agencies) under license no: <strong>11738</strong></p></div></div></section>
+    <section class="certification"><div class="certification-content"><div class="cert-badge has-logo"><img src="Toursablogo.png" alt="TURSAB Logo" class="tursab-logo"></div><div class="cert-text"><h3>Official Certification</h3><p>CYN TURIZM is proud to be certified by <strong>TURSAB</strong> (Association of Turkish Travel Agencies) under license no: <strong>11738</strong></p></div></div></section>
 
     <section class="contact" id="contact">
         <div class="section-header"><span class="section-tag">Get In Touch</span><h2 class="section-title">Book Your Transfer Today</h2><p class="section-desc">Contact us to book your transfer or tour. Our team is ready to make your journey seamless.</p></div>
@@ -285,7 +289,7 @@
 
     <footer class="footer">
         <div class="footer-main">
-            <div class="footer-brand"><a href="#" class="logo"><div class="logo-icon"><i class="fas fa-star-and-crescent"></i></div><div><div class="logo-text">CYN Tour</div><div class="logo-tagline">Tourism & Travel Agency</div></div></a><p>Your trusted partner for premium Turkish transfers and tours since 2006. TURSAB certified agency providing quality services to travelers worldwide.</p><div class="tursab-badge"><img src="Toursablogo.png" alt="TURSAB" style="width:24px;height:24px;border-radius:50%;"><span>TURSAB License: 11738</span></div></div>
+            <div class="footer-brand"><a href="#" class="logo"><div class="logo-icon"><i class="fas fa-star-and-crescent"></i></div><div><div class="logo-text">CYN Tour</div><div class="logo-tagline">Tourism & Travel Agency</div></div></a><p>Your trusted partner for premium Turkish transfers and tours since 2006. TURSAB certified agency providing quality services to travelers worldwide.</p><div class="tursab-badge"><img src="Toursablogo.png" alt="TURSAB" class="tursab-logo-small"><span>TURSAB License: 11738</span></div></div>
             <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#transfers">Transfers</a></li><li><a href="#tours">Tours</a></li><li><a href="#fleet">Our Fleet</a></li><li><a href="#contact">Contact</a></li></ul></div>
             <div><h4>Popular Tours</h4><ul class="footer-links"><li><a href="#tours">Istanbul City Tour</a></li><li><a href="#tours">Cappadocia Red Tour</a></li><li><a href="#tours">Princes' Islands</a></li><li><a href="#tours">Bursa Tour</a></li><li><a href="#tours">Turkish Night</a></li></ul></div>
             <div><h4>Algeria Office</h4><ul class="footer-links footer-contact"><li><i class="fas fa-map-marker-alt"></i> 08, Route du Kadous, Hydra - Alger</li><li><i class="fas fa-phone"></i> +213 23 48 20 22</li><li><i class="fab fa-whatsapp"></i> +213 770 127 157</li><li><i class="fas fa-envelope"></i> info@cyntour.com</li></ul></div>
